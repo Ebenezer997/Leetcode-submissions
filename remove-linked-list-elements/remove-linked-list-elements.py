@@ -14,5 +14,6 @@ class Solution:
             else : 
                 f=f.next
         return head.next if head.val==val else head
+        
        
        
