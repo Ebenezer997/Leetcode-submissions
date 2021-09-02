@@ -1,16 +1,22 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        if not nums: return 0
-        max_pro = nums[0]
-        min_pro = nums[0]
-        
+        #if it is nums return empty
+        if not nums:
+            return 0
+        #initialize two pointers max_pro and min_pro as initial elements
+        max_pro = min_pro = nums[0]
+        #initialize result to max_pro
         result = max_pro
-        
-        for i in range(1, len(nums)):
+        # loop through nums from index 1
+        for i in range(1,len(nums)):
+            # current element is the nums[i]
             curr = nums[i]
-            temp_pro = max(curr,max_pro*curr, min_pro*curr)
-            min_pro = min(curr,max_pro*curr, min_pro*curr )
+            #this calculate temprory product,
+            temp_pro = max(curr, curr*max_pro,curr*min_pro)
+            #calculate min product
+            min_pro = min(curr,curr*max_pro,curr*min_pro)
+            #initialize max_pro = temp_pro
             max_pro = temp_pro
-            result = max(max_pro, result)
-        return result
             
+            result = max(max_pro,result)
+        return result
