@@ -9,8 +9,8 @@ class Solution:
         if not l2 : return l1
         if not l1 : return l2
         # Assign dummy(temporay) head to  and also asign it to current.
-        dummy = ListNode()
-        current = dummy
+        current = head  = ListNode()
+         # = head
         
         #while list1 and list2 exist: if the current value in list1 is less than list 2 
         #the next pointer is assigned to them
@@ -26,14 +26,15 @@ class Solution:
                 l2 = l2.next
             #after comparing the current pointer is updated
             current = current.next
-            current.next = l1 or l2
+            #the one which will be remained will be added
+        current.next = l1 or l2
         # if l1:
         #     current.next = l1
         # elif l2:
         #     current.next = l2
         
               
-        return dummy.next
+        return head.next
         
         
         
