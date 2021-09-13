@@ -6,9 +6,10 @@ class Solution:
         matrix.reverse()
         for i in range(len(matrix)):
             for j in range(i):
-                val=matrix[i][j]
-                matrix[i][j]=matrix[j][i]
-                matrix[j][i]=val
+                matrix[i][j],matrix[j][i] = matrix[j][i],matrix[i][j]
+                # val=matrix[i][j]
+                # matrix[i][j]=matrix[j][i]
+                # matrix[j][i]=val
 
             
         return matrix
