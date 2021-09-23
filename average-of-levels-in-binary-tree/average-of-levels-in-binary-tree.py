@@ -5,23 +5,15 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def averageOfLevels(self, root: TreeNode) -> List[float]:
+    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+        #use breath search first: we search by level traversal.
         
-        #check if the tree is not empty:if empty you return none
-        # assign the  traverse to root
-        #create three empty lists: level:for value in each level , next_level : save values for next level, reults: save the final values.
-        #while the root exist you loop thru and add the nodes of each level to level
-        #you add the subtree of each level to the next_level
-        #you add the values the values in the level and divide it by the length
-        #assign the traverse to the next_level
-        #after that assign both level and next_level to empty list
-        
-        if not root:return None
-        
-        traverse = [root]
+        if not root: return None
         level = []
         next_level = []
-        results = []
+        result = []
+        
+        traverse = [root]
         
         while traverse:
             for node in traverse:
@@ -31,17 +23,12 @@ class Solution:
                     next_level.append(node.left)
                 if node.right:
                     next_level.append(node.right)
-            results.append(sum(level)/len(level))
+            result.append(sum(level)/len(level))
             traverse = next_level
             next_level = []
             level = []
-        return results
-        
-        
+        return result
             
         
         
-       
-        
-            
         
