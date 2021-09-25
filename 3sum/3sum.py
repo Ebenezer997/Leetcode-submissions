@@ -3,13 +3,14 @@ class Solution:
         res = set()
         nums.sort()
         N = len(nums)
+        
         for i in range(N-2):
-            r = N-1
             l = i+1
-            while l <r:
-                same = nums[i]+nums[l]+nums[r] 
+            r = N-1
+            while l<r:
+                same = nums[i]+nums[r]+nums[l]
                 if same == 0:
-                    res.add((nums[i],nums[l],nums[r]))
+                    res.add((nums[i],nums[r],nums[l]))
                     l += 1
                     r -= 1
                 elif same < 0:
@@ -18,6 +19,4 @@ class Solution:
                     r -= 1
         return res
                 
-                
-           
         
