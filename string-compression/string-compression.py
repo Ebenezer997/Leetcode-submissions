@@ -13,7 +13,8 @@ class Solution:
                         chars[i] = k
                         i+= 1
                 count = 1
-        chars = chars[:1]
+        chars = chars[:i]
+        
         return i
                         
                 
