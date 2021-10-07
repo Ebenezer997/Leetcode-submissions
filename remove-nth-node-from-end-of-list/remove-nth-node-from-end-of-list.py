@@ -9,7 +9,7 @@ class Solution:
         #two pointers one will go faster and reach the end and the other will follow after the other has reach  
         slow = head 
         fast = head
-        #looping and first trip 
+        #looping and first trip in terms of n
         for i in range(n):
             fast = fast.next
         # if fast does not exist we return the other value
