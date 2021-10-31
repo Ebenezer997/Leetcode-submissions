@@ -21,7 +21,7 @@ class RandomizedSet:
         
 
     def getRandom(self) -> int:
-        a = random.choice(list(self.database))
+        a = choice(list(self.database))
         
         return a
         
