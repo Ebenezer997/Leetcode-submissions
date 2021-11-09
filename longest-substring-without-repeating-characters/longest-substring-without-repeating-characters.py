@@ -1,6 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        #big(O) O(n) and O(n)
+         #big(O) O(n) and O(n)
         #sliding window question
         #create an empty set
         char = set()
@@ -20,3 +20,6 @@ class Solution:
             res = max(res,r-l+1)
         return res
         
+        
+                
+            
