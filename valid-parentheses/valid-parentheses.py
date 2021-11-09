@@ -23,3 +23,4 @@ class Solution:
         return stack == []
         
         #big 0 is linear(0(n)) and space 0(n)
+        
