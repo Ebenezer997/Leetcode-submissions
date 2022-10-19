@@ -9,9 +9,6 @@ class Leaderboard:
         self.board[playerId] += score
         
         
-     
-        
-        
 
     def top(self, K: int) -> int:
         top = 0
