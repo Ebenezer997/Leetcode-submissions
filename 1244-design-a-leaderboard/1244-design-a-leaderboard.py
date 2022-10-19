@@ -1,3 +1,5 @@
+from collections import Counter
+
 class Leaderboard:
 
     def __init__(self):
