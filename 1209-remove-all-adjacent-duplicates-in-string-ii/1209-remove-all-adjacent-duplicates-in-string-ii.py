@@ -10,15 +10,21 @@ class Solution:
             
             else:
                 if i == x[-1]:
-                    c[-1]+= 1
-                    if (c[-1] == k):
+                    c[-1] += 1
+                    if c[-1] == k:
                         x.pop()
                         c.pop()
                 else:
                     x.append(i)
                     c.append(1)
+        
         ans = ""
+        
         for i in range(len(x)):
             ans += c[i]*x[i]
+        
         return ans
+    
+            
                     
+        
