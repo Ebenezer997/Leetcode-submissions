@@ -1,10 +1,7 @@
-from collections import Counter
 class Leaderboard:
 
     def __init__(self):
         self.board = Counter()
-        
-        
 
     def addScore(self, playerId: int, score: int) -> None:
         self.board[playerId] += score
@@ -18,7 +15,7 @@ class Leaderboard:
         
 
     def reset(self, playerId: int) -> None:
-        self.board.pop(playerId)
+         self.board.pop(playerId)
         
 
 
