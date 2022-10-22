@@ -1,31 +1,24 @@
 from collections import Counter
-
 class Leaderboard:
 
     def __init__(self):
         self.board = Counter()
         
+        
 
     def addScore(self, playerId: int, score: int) -> None:
-        
         self.board[playerId] += score
-        
         
 
     def top(self, K: int) -> int:
-        top = 0
+        sumtop = 0
         for player in self.board.most_common(K):
-            top += player[1]
-        
-        return top
-        
-        
+            sumtop += player[1]
+        return sumtop
         
 
     def reset(self, playerId: int) -> None:
-        
         self.board.pop(playerId)
-       
         
 
 
