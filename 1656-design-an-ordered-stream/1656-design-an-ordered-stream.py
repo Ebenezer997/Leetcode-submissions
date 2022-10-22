@@ -4,10 +4,12 @@ class OrderedStream:
         self.container = {}
         self.current = 1
         
+        
 
     def insert(self, idKey: int, value: str) -> List[str]:
         self.container[idKey] = value
         res = []
+        
         while self.current in self.container:
             res.append(self.container[self.current])
             self.current += 1
