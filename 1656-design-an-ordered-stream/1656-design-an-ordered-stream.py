@@ -5,6 +5,7 @@ class OrderedStream:
         self.current = 1
         
         
+        
 
     def insert(self, idKey: int, value: str) -> List[str]:
         self.container[idKey] = value
