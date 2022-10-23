@@ -16,10 +16,10 @@ class Solution:
                 else:
                     x.append(i)
                     c.append(1)
+                    
         res = ''
+        
         for i in range(len(x)):
             res += x[i]*c[i]
         return res
-                    
-                
         
