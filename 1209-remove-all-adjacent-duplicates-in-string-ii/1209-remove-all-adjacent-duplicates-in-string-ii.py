@@ -7,9 +7,8 @@ class Solution:
             if len(x) == 0:
                 x.append(i)
                 c.append(1)
-            
             else:
-                if i == x[-1]:
+                if x[-1] == i:
                     c[-1] += 1
                     if c[-1] == k:
                         x.pop()
@@ -17,14 +16,13 @@ class Solution:
                 else:
                     x.append(i)
                     c.append(1)
-        
-        ans = ""
+                    
+        res = ''
         
         for i in range(len(x)):
-            ans += c[i]*x[i]
+            res += c[i]*x[i]
         
-        return ans
-    
-            
+        return res
+        
                     
         
