@@ -1,6 +1,5 @@
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
-        
         x = []
         c = []
         
@@ -17,15 +16,10 @@ class Solution:
                 else:
                     x.append(i)
                     c.append(1)
-        res = ""
-        
+        res = ''
         for i in range(len(x)):
-            res += c[i]*x[i]
-        
+            res += x[i]*c[i]
         return res
-                        
-                        
-                
-     
                     
+                
         
