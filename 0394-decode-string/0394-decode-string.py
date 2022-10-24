@@ -5,19 +5,18 @@ class Solution:
         for i in range(len(s)):
             if s[i] != "]":
                 stack.append(s[i])
-            
             else:
                 substr = ""
                 while stack[-1] != "[":
                     c = stack.pop()
                     substr = c + substr
                 stack.pop()
-                n = ""
+                nums = ""
                 while stack and stack[-1].isdigit():
-                    num = stack.pop()
-                    n = num + n
-                stack.append(int(n)*substr)
+                    n = stack.pop()
+                    nums = n + nums
+                stack.append(int(nums)*substr)
         return "".join(stack)
-                
-        
-        
+                    
+                    
+            
